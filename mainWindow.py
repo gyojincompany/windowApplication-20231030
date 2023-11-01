@@ -22,8 +22,13 @@ class MyWin(QWidget): # QWidget 클래스를 상속받는 자식클래스를 선
         self.btn2.resize(100, 50)  # 버튼2의 크기
         self.btn2.clicked.connect(self.btn2_click)  # 버튼2이 클릭되었을 때 실행될 함수를 연결
 
-        self.label1 = QLabel('버튼1과 버튼2를 클릭하세요!!', self)
-        self.label1.move(80, 20)
+        self.label1 = QLabel('버튼1과 버튼2를 클릭하세요!!', self) # 레이블 생성
+        self.label1.move(80, 20) # 레이블의 위치 지정
+
+        self.lineEdit1 = QLineEdit("", self) # 사용자 입력박스
+        self.lineEdit1.move(80, 150) # 위치 지정
+        self.lineEdit1.setText("안녕하세요") # 처음 시작할 때 해당 텍스트가 입력된 상태로 시작
+
 
 
         self.show() # 윈도우창을 스크린에 보여줌
