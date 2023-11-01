@@ -21,6 +21,11 @@ class MyWin(QWidget): # QWidget 클래스를 상속받는 자식클래스를 선
         self.btn2.move(150, 50)  # 버튼2의 위치
         self.btn2.resize(100, 50)  # 버튼2의 크기
         self.btn2.clicked.connect(self.btn2_click)  # 버튼2이 클릭되었을 때 실행될 함수를 연결
+
+        self.label1 = QLabel('버튼1과 버튼2를 클릭하세요!!', self)
+        self.label1.move(80, 20)
+
+
         self.show() # 윈도우창을 스크린에 보여줌
 
     def btn1_click(self): # 버튼1번이 클릭되면 실행되는 메서드
